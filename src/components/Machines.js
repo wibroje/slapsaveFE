@@ -14,6 +14,8 @@ class Machines extends Component {
 	
 	}
 
+
+
     render() {
     			let filteredList =this.props.machines.data.filter(
     					(machine) => {
@@ -26,21 +28,29 @@ class Machines extends Component {
 
 
   	  			let machineList = filteredList.map( (machine, index) => {
-  	  				
+  	  				let id = machine._id;
 					return <li key={index}>
-						<h4>{machine.name}</h4>
+						<h4><a href={'/machines/' + id}>{machine.name}</a></h4>
 						<p>{machine.manufacturer}</p>
+						
 					</li>
 					
 				})
     return (
 
-    	<div className="sidebar">
-    		<input  type='text'
+    	<div>
+    		<br/>
+    		<h2>Search by machine name or manufacturer</h2>
+    		<br/>
+
+    		<input  style={{textAlign:'center'}}
+    				type='text'
     				placeholder='Search'
     				value={this.state.search}
     				onChange={this.updateSearch.bind(this)}/>
+    		<hr/>
         	<ul>{machineList}</ul>
+
     	</div>
     
     );

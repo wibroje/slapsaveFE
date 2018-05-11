@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Machines from '../components/Machines';
 import axios from 'axios';
 
+
 class MachinesContainer extends Component {
 
 	constructor(){
@@ -26,6 +27,7 @@ class MachinesContainer extends Component {
     return (
     	<div>
         	<Machines machines={this.state.machines} />
+        	
     	</div>
     );
   }
