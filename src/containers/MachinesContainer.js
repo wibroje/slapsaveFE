@@ -9,8 +9,7 @@ class MachinesContainer extends Component {
 		this.state = {
 			machines : {
 				data : []
-			}
-			
+			}	
 		}
 	}
 
@@ -28,7 +27,6 @@ class MachinesContainer extends Component {
     	<div>
         	<Machines machines={this.state.machines} />
     	</div>
-    
     );
   }
 }

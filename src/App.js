@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './Header';
-import MachinesContainer from './containers/MachinesContainer'
+import Header from './components/Header';
 
 import {
   BrowserRouter as Router,
@@ -9,15 +8,19 @@ import {
   Link
 } from 'react-router-dom';
 
-class App extends Component {
+import Home from './components/Home';
+import MachinesContainer from './containers/MachinesContainer';
+
+class App extends Component{
   render() {
     return (
-    	<div className="App">
+      <Router>
+    	  <div className="App">
         	<Header/>
-        	<h1>slapSave Home</h1>
-          <MachinesContainer/>
+        	<Route exact path="/" component={Home} />
+          <Route path="/machines" component={MachinesContainer} />         
     	</div>
-    
+      </Router>
     );
   }
 }
