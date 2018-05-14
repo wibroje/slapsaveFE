@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../App.css';
 import { Nav, NavItem, Navbar } from 'react-bootstrap'
 import {
   Link
