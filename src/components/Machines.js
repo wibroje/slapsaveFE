@@ -17,7 +17,7 @@ class Machines extends Component {
 
 
     render() {
-    			let filteredList =this.props.machines.data.filter(
+    			let filteredList = this.props.machines.data.filter(
     					(machine) => {
     						return machine.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 || machine.manufacturer.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
     						//if you can't find this.state.search within machine name, do not return
@@ -28,33 +28,66 @@ class Machines extends Component {
 
 
   	  			let machineList = filteredList.map( (machine, index) => {
-  	  				let id = machine._id;
+
+
+
 					return <li key={index}>
-						<h4><a href={'/machines/' + id}>{machine.name}</a></h4>
-						<p>{machine.manufacturer}</p>
+					<div className="col-lg-6">
+						<h1>{machine.name}</h1>
 						
+						<img className='machine-image'
+								src={machine.image}/>
+						<p>{machine.manufacturer + '-' + machine.year}</p>
+						<br/>
+						
+						<iframe className='vidyas'
+								src={machine.video}
+   								width="350" 
+   								height="650" 
+   								frameBorder="0" 
+   								>
+   						</iframe>
+
+   						<Comments
+   							comments={machine.comments}
+   							name={machine.name}
+   						/>
+   						<br/>
+   						<PostComment
+   							name={machine.name}
+   							_id={machine._id}
+   							location={this.props.location}
+   						/>
+   						<br/><br/><hr/><br/><br/><br/><br/>
+
+					</div>	
 					</li>
+  	  			
 					
-				})
+					
+  	  			})
     return (
 
     	<div>
     		<br/>
     		<h2>Search by machine name or manufacturer</h2>
     		<br/>
-
-    		<input  style={{textAlign:'center'}}
-    				type='text'
-    				placeholder='Search'
-    				value={this.state.search}
-    				onChange={this.updateSearch.bind(this)}/>
-    		<hr/>
-        	<ul>{machineList}</ul>
-
+		    		<input  className='search-input'
+		    				style={{textAlign:'center'}}
+		    				type='text'
+		    				placeholder='Search'
+		    				value={this.state.search}
+		    				onChange={this.updateSearch.bind(this)} />
+		    		<hr/>
+    		<div className="Row">
+    			
+		        	<ul>{machineList}</ul>
+		        
+		    </div>
     	</div>
     
     );
-  }
+} 
 }
 
 export default Machines;

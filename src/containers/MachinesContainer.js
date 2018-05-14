@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Machines from '../components/Machines';
+
 import axios from 'axios';
 
 
@@ -10,7 +11,7 @@ class MachinesContainer extends Component {
 		this.state = {
 			machines : {
 				data : []
-			}	
+			}
 		}
 	}
 
@@ -24,10 +25,16 @@ class MachinesContainer extends Component {
 
 
   render() {
+
+  	
     return (
-    	<div>
-        	<Machines machines={this.state.machines} />
-        	
+    	<div className="container">
+    		<div className="row">
+    			<div className="col-lg-12">
+        			<Machines machines={this.state.machines}
+        					  location={this.props.location} />
+        		</div>
+        	</div>    	
     	</div>
     );
   }

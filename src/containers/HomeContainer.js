@@ -6,7 +6,7 @@ class HomepageContainer extends Component {
 			<div>
 				
 			</div>
-   
+   			
     	);
   	}
 }
