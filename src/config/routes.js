@@ -5,6 +5,7 @@ import MachinesContainer from '../containers/MachinesContainer';
 import EventsContainer from '../containers/EventsContainer';
 import EventBody from '../components/EventBody';
 import PostEvent from '../components/PostEvent';
+import EditEvent from '../components/EditEvent';
 
 export default (
   <Switch>
@@ -12,6 +13,7 @@ export default (
     <Route path='/machines' component={ MachinesContainer }/>
     <Route path='/events' component={ EventsContainer }/>
     <Route path='/event/add' component={ PostEvent }/>
+    <Route path='/event/edit/:event_id' component={ EditEvent }/>
     <Route path='/event/:event_id' component={ EventBody }/>
   </Switch>
 )

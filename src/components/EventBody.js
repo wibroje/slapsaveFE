@@ -17,7 +17,7 @@ constructor(props){
 			this.setState({
 				body : results.data
 			})
-			console.log(this.state)
+			
 			
 		})
 		.catch(err => console.log(err))

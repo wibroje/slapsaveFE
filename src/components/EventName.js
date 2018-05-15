@@ -12,7 +12,7 @@ constructor(props){
     return (
 
 		<li className="collection-item">
-			<a href={`/event/${this.state.item._id}`}>{this.state.item.name}</a>
+			<Link to={`/event/${this.state.item._id}`}>{this.state.item.name}</Link>
 		</li>
     );
   }
