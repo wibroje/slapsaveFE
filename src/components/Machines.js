@@ -14,20 +14,16 @@ class Machines extends Component {
 
 	render() {
     	let filteredList = this.props.machines.data.filter(
-    			(machine) => {
-    				return machine.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 || machine.manufacturer.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
-    				//if can't find this.state.search within machine name, do not return
-    				//if found then return it within filterList
-    			}
-    	);
+    		(machine) => {
+    			return machine.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 || machine.manufacturer.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+    			//if can't find this.state.search within machine name, do not return
+    			//if found then return it within filterList
+    	}
+    			);
 
+		let machineList = filteredList.map( (machine, index) => {
 
-
-  	  			let machineList = filteredList.map( (machine, index) => {
-
-
-
-					return <li key={index}>
+				return <li key={index}>
 					<div>
 						<h1>{machine.name}</h1>
 						
@@ -52,16 +48,14 @@ class Machines extends Component {
    						<br/>
 
 					</div>	
-					</li>
-  	  			
-					
+					</li>  	  			
 					
   	  			})
 	    return (
 
 	    	<div>
 	    		<br/>
-	    		<h2>Search by machine name or manufacturer</h2>
+	    		<h2>Search machine name or manufacturer</h2>
 	    		<br/>
 	    			<div className="input-field">
 			    		<input  style={{textAlign:'center'}}

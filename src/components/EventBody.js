@@ -13,7 +13,7 @@ constructor(props){
 	componentWillMount(){
 		let eventId = this.props.match.params.event_id;
 		
-		axios.get(`/api/events/${eventId}`).then((results) => {
+		axios.get(`https://slapsave.herokuapp.com/api/events/${eventId}`).then((results) => {
 			this.setState({
 				body : results.data
 			})
@@ -25,7 +25,7 @@ constructor(props){
 
     onDelete(){
         let eventId = this.state.body._id;
-        axios.delete(`/api/events/${eventId}`)
+        axios.delete(`https://slapsave.herokuapp.com/api/events/${eventId}`)
         .then(response => {
             this.props.history.push("/events")
 

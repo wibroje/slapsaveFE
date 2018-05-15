@@ -14,17 +14,16 @@ class MachinesContainer extends Component {
 			}
 		}
 	}
-
+	//fetches machines from api
 	componentDidMount(){
-		axios.get("/api/machines").then((results) => {
+		axios.get("https://slapsave.herokuapp.com/api/machines").then((results) => {
 			this.setState({
 				machines : results
 			})
 		})
 	}
 
-
-  render() {
+	render() {
 
   	
     return (
@@ -37,7 +36,7 @@ class MachinesContainer extends Component {
         	</div>    	
     	</div>
     );
-  }
+    }
 }
 
 export default MachinesContainer;

@@ -8,7 +8,7 @@ class PostEvent extends Component {
 		console.log(newEvent)
 		axios.request({
 			method : 'post',
-			url : '/api/events',
+			url : 'https://slapsave.herokuapp.com/api/events',
 			data : newEvent
 		}).then(response => {
 			console.log(response)

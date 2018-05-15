@@ -12,7 +12,7 @@ class EventsContainer extends Component {
 	}
 
 	componentWillMount(){
-		axios.get("/api/events").then((results) => {
+		axios.get("https://slapsave.herokuapp.com/api/events").then((results) => {
 			this.setState({
 				events : results.data
 			})

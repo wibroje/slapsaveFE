@@ -20,7 +20,7 @@ class EditEvent extends Component {
 	componentWillMount(){
 		let eventId = this.props.match.params.event_id;
 		
-		axios.get(`/api/events/${eventId}`).then(response => {
+		axios.get(`https://slapsave.herokuapp.com/api/events/${eventId}`).then(response => {
 			this.setState({
 				_id : response.data._id,
 				name : response.data.name,
@@ -40,7 +40,7 @@ class EditEvent extends Component {
 		console.log(newEvent)
 		axios.request({
 			method : 'put',
-			url : `/api/events/${this.state._id}`,
+			url : `https://slapsave.herokuapp.com/api/events/${this.state._id}`,
 			data : newEvent
 		}).then(response => {
 			console.log(response)
