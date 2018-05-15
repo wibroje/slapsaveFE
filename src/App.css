@@ -20,11 +20,19 @@
 
   }
 
+  .target-container {
+    text-align: center;
+  }
+
   .card {
 	height: 200%;
 	background-color: black;
+  
   }
 
+  .big-empty-div {
+    height: 300px;
+  }
 
   footer .container {
     background-color: transparent;
@@ -37,6 +45,18 @@
   }
 
   input {
+    color: white;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  p {
     color: white;
   }
 

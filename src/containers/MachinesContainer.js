@@ -28,7 +28,7 @@ class MachinesContainer extends Component {
 
   	
     return (
-    	<div className="container">
+    	<div className="container target-container">
     		<div className="row">
     			<div className="col-lg-12">
         			<Machines machines={this.state.machines}

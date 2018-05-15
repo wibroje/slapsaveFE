@@ -49,9 +49,8 @@ constructor(props){
 
     		<button onClick={this.onDelete.bind(this)} className="btn red right"><i className="fas fa-eraser"></i></button>
 
-    		<br/>
-    		<br/>
-    		<br/>
+    		<div className="big-empty-div">
+            </div>
     	</div>
     );
   }

@@ -37,6 +37,9 @@ class EventsContainer extends Component {
     		<ul className="collection">	
     			{eventItems}
     		</ul>
+        <div className="big-empty-div">
+
+        </div>
     	</div>
     );
   }

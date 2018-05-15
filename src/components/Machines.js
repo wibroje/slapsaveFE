@@ -16,7 +16,7 @@ class Machines extends Component {
     	let filteredList = this.props.machines.data.filter(
     			(machine) => {
     				return machine.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 || machine.manufacturer.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
-    				//if you can't find this.state.search within machine name, do not return
+    				//if can't find this.state.search within machine name, do not return
     				//if found then return it within filterList
     			}
     	);
@@ -36,7 +36,7 @@ class Machines extends Component {
 						<br/>
 						
 						<iframe src={machine.video}
-   								width="100%" 
+   								width="350" 
    								height="650" 
    								frameBorder="0" 
    								>
