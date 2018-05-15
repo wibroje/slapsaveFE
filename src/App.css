@@ -1,0 +1,42 @@
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: 
+
+    	url('https://images.unsplash.com/photo-1474647044104-115f6201bc67?ixlib=rb-0.3.5&s=1edf4add6086ca5617ad09baef386da6&auto=format&fit=crop&w=2734&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .container {
+    background-color: rgba(0,0,0,.3);
+    border-radius: 1em;
+
+  }
+
+  .card {
+	height: 200%;
+	background-color: black;
+  }
+
+
+  footer .container {
+    background-color: transparent;
+    text-align: left;
+    align-self: baseline;
+  }
+
+  li {
+    color: black;
+  }
+
+  input {
+    color: white;
+  }
+

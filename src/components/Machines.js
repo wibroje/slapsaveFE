@@ -44,7 +44,12 @@ class Machines extends Component {
 
    					
    						<br/>
-   						<br/><br/><hr/><br/><br/><br/><br/>
+   							<br/>
+   								<br/>
+   									<hr/>
+   								<br/>
+   							<br/>
+   						<br/>
 
 					</div>	
 					</li>
@@ -58,11 +63,14 @@ class Machines extends Component {
 	    		<br/>
 	    		<h2>Search by machine name or manufacturer</h2>
 	    		<br/>
+	    			<div className="input-field">
 			    		<input  style={{textAlign:'center'}}
 			    				type='text'
-			    				placeholder='Search'
+			    				name='Search'
 			    				value={this.state.search}
 			    				onChange={this.updateSearch.bind(this)} />
+			    		<label htmlFor='Search'>Search</label>
+			    	</div>
 			    		<hr/>
 	    		<div>
 	    			

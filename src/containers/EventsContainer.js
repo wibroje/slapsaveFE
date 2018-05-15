@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import EventName from '../components/EventName';
 
 class EventsContainer extends Component {
 
@@ -23,8 +24,10 @@ class EventsContainer extends Component {
   render() {
 
   	const eventItems = this.state.events.map((event, i) => {
+
   		return (
-  			<li className="collection-item">{event.name}</li>
+  			<EventName key={event._id} item={event}/>
+
   		)
   	})
   	
